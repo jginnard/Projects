@@ -1,0 +1,3 @@
+curl -o /var/www/html/Scheduler/Data/summer.txt http://it.emich.edu/bannerfiles/sctnenrl_su.txt -G --data-urlencode text@-
+curl -o /var/www/html/Scheduler/Data/fall.txt http://it.emich.edu/bannerfiles/sctnenrl_fa.txt -G --data-urlencode text@-
+curl -o /var/www/html/Scheduler/Data/winter.html http://it.emich.edu/bannerfiles/sctnenrl_wi.txhttp://it.emich.edu/bannerfiles/sctnenrl_wi.txtt -G --data-urlencode text@-

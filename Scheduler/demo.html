@@ -1,0 +1,276 @@
+    <link rel="stylesheet" id="themeCSS" href="jQRangeSlider-5.7.2/css/classic.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="jQRangeSlider-5.7.2/lib/jquery.mousewheel.min.js"></script>
+<script src="jQRangeSlider-5.7.2/jQAllRangeSliders-min.js"></script>
+
+  <h1>jQRangeSlider demos</h1>
+  <div id="slider"></div>
+  <script>$("#slider").rangeSlider();</script>
+
+
+  <!DOCTYPE html>
+ <html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>Webpage of Jeremy Ginnard</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="../jginnard/default.css" rel="stylesheet" type="text/css" media="all" />
+ <link href="../jginnard/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+ <!--Sliders-->
+ <link rel="stylesheet" id="themeCSS" href="jQRangeSlider-5.7.2/css/classic.css">
+ <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+ <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+ <script src="jQRangeSlider-5.7.2/lib/jquery.mousewheel.min.js"></script>
+ <script src="jQRangeSlider-5.7.2/jQAllRangeSliders-min.js"></script>
+
+
+
+   <script src="code.js"></script>
+   <link href='fullcalendar-2.6.0/fullcalendar.css' rel='stylesheet' />
+   <link href='fullcalendar-2.6.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+   <script src='fullcalendar-2.6.0/lib/moment.min.js'></script>
+   <!-- <script src='fullcalendar-2.6.0/lib/jquery.min.js'></script> -->
+   <script src='fullcalendar-2.6.0/fullcalendar.min.js'></script>
+
+ <style>
+ .navbar-default{
+ 		border-width: 0px;
+ 		border-radius: 0px;
+ 		margin: 0px;
+ 		margin-bottom: 0;
+ 		background: #363636;
+ }
+ .navbar-nav{
+ margin: 0px;
+ padding: 0px;
+ background: #363636;
+ font-family: 'Raleway', sans-serif;
+ font-size: 1em;
+ font-weight: 400;
+ color: #363636;
+ text-transform: uppercase;
+ font-family: 'Raleway', sans-serif;
+ }
+
+ footer{
+   	background: #363636;
+ 	color: white;
+   	height:60px;   /* Height of the footer */
+ 	text-align: center;
+ 	padding: 1em;
+ 	margin-top: 2em;
+ }
+
+ table, th, td {
+ 	padding: 0.25em;
+ }
+
+ /* navbar */
+ .navbar-default {
+     background-color: #363636;
+     border-color: #363636;
+ }
+ /* title */
+ .navbar-default .navbar-brand {
+     color: #777;
+ }
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+     color: #5E5E5E;
+ }
+ /* link */
+ .navbar-default .navbar-nav > li > a {
+     color: #777;
+ }
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+     color: white;
+ }
+ .navbar-default .navbar-nav > .active > a,
+ .navbar-default .navbar-nav > .active > a:hover,
+ .navbar-default .navbar-nav > .active > a:focus {
+     color: #555;
+     background-color: #E7E7E7;
+ }
+ .navbar-default .navbar-nav > .open > a,
+ .navbar-default .navbar-nav > .open > a:hover,
+ .navbar-default .navbar-nav > .open > a:focus {
+     color: white;
+     background-color: #D5D5D5;
+ }
+ /* caret */
+ .navbar-default .navbar-nav > .dropdown > a .caret {
+     border-top-color: #777;
+     border-bottom-color: #777;
+ }
+ .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+ .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+     border-top-color: #333;
+     border-bottom-color: #333;
+ }
+ .navbar-default .navbar-nav > .open > a .caret,
+ .navbar-default .navbar-nav > .open > a:hover .caret,
+ .navbar-default .navbar-nav > .open > a:focus .caret {
+     border-top-color: #555;
+     border-bottom-color: #555;
+ }
+ /* mobile version */
+ .navbar-default .navbar-toggle {
+     border-color: #DDD;
+ }
+ .navbar-default .navbar-toggle:hover,
+ .navbar-default .navbar-toggle:focus {
+     background-color: #DDD;
+ }
+ .navbar-default .navbar-toggle .icon-bar {
+     background-color: #CCC;
+ }
+
+     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+         color: #333;
+     }
+ }
+
+ </style>
+
+ </head>
+ <body onload="getDataUM()">
+
+ 	<nav class="navbar navbar-default">
+ 	  <div class="container-fluid">
+ 	    <!-- Brand and toggle get grouped for better mobile display -->
+ 	    <div class="navbar-header">
+ 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+ 	        <span class="sr-only">Toggle navigation</span>
+ 	        <span class="icon-bar"></span>
+ 	        <span class="icon-bar"></span>
+ 	        <span class="icon-bar"></span>
+ 	      </button>
+ 	    </div>
+
+ 	    <!-- Collect the nav links, forms, and other content for toggling -->
+ 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ 	      <ul class="nav navbar-nav">
+ 					<li><a href="../jginnard/index.html">Homepage</a></li>
+ 					<li><a href="../jginnard/about.html">About Me</a></li>
+ 					<li class="active"><a href="../jginnard/projects.html">Projects<span class="sr-only">(current)</span></a></li>
+ 					<li><a href="../jginnard/contact.html">Contact Me</a></li>
+ 	      </ul>
+ 				<!--
+ 	      <form class="navbar-form navbar-left" role="search">
+ 	        <div class="form-group">
+ 	          <input type="text" class="form-control" placeholder="Search">
+ 	        </div>
+ 	        <button type="submit" class="btn btn-default">Submit</button>
+ 	      </form>
+ 			-->
+ 	    </div><!-- /.navbar-collapse -->
+ 	  </div><!-- /.container-fluid -->
+ 	</nav>
+
+
+ 	<!-- Page Content -->
+ 	<div class="container-fluid">
+
+ 		<div class="row">
+ 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ 			<div class="title">
+ 				<h2>U of M Scheduler</h2>
+ 				<span class="byline" >Making Scheduling classes as easy as clicking a button.</span> </div>
+ 			<p>Fill out the form with the 4 letter subject and course number. Click Submit to see all possible schdules.</p>
+     </div>
+   </div>
+       <div id="appContainer" onload="getData()">
+ 				<div id="messageBox"></div>
+     <div class="row">
+
+       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+ 	<table>
+ 		<tr>
+ 			<th>Subject</th><th>Course Number</th>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject1" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course1" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject2" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course2" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject3" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course3" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject4" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course4" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject5" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course5" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><input type="text" id="subject6" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course6" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+     <tr>
+ 			<td><input type="text" id="subject7" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course7" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+     <tr>
+ 			<td><input type="text" id="subject8" data-toggle="tooltip"  title="4 uppercase letters"></td><td><input type="text" id="course8" data-toggle="tooltip"  title="2-3 digits"></td>
+ 		</tr>
+ 		<tr>
+ 			<td><button type onclick="MakeSchedule()">Submit</td><td><button onclick="window.location.reload()">Reset</button></td>
+ 		</tr>
+ 	</table>
+ </div>
+
+ <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+   <table>
+     <tr><td>Days:</td><td>M</td><td>T</td><td>W</td><td>H</td><td>F</td><td>S</td><td>U</td></tr>
+     <tr><td></td><td><input type="checkbox" name="mondayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="tuesdayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="wednesdayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="thursdayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="fridayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="saturdayCheck" value="true" checked></td>
+       <td><input type="checkbox" name="sundayCheck" value="true" checked></td></tr>
+   </table>
+   <div id="rangeMonday"></div>
+   <div id="rangeTuesday"></div>
+   <div id="rangeWednesday"></div>
+   <div id="rangeThursday"></div>
+   <div id="rangeFriday"></div>
+   <div id="rangeSaturday"></div>
+   <div id="rangeSunday"></div>
+
+   <h1>jQRangeSlider demos</h1>
+   <div id="slider2"></div>
+   <script>$("#slider2").rangeSlider();</script>
+
+ </div>
+ </div>
+
+
+
+ 	</div>
+ </div>
+ 	<footer>
+ 			<div class="row text-center">
+ 					<div class="col-lg-12">
+ 							<p>Copyright &copy; Jeremy Ginnard 2016
+ 					<a href="https://www.linkedin.com/pub/jeremy-ginnard/36/138/29b" target="_blank">Linkedin </a>
+ 					<a href="https://github.com/jginnard/" target="_blank"> GitHub </a>
+ 					</p>
+ 					</div>
+ 			</div>
+ 	</footer>
+ </body>
+ </html>
+ </html>

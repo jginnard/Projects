@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jeremy Ginnard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="../jginnard/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../jginnard/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<script src="analytics.js" defer></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="../jginnard/bootstrap-dialog.min.css">
+
+<!--My Custom Stylesheet, overrides Bootstrap-->
+<link rel="stylesheet" href="../jginnard/custom.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../jginnard/bootstrap-dialog.min.js"></script>
+
+
+<!--Sliders-->
+<link rel="stylesheet" id="themeCSS" href="jQRangeSlider-5.7.2/css/classic.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="jQRangeSlider-5.7.2/lib/jquery.mousewheel.min.js"></script>
+<script src="jQRangeSlider-5.7.2/jQAllRangeSliders-min.js"></script>
+<script src="sliders.js"></script>
+
+ <script src="code.js"></script>
+ <link href='fullcalendar-2.6.0/fullcalendar.css' rel='stylesheet' />
+ <link href='fullcalendar-2.6.0/fullcalendar.print.css' rel='stylesheet' media='print' />
+ <script src='fullcalendar-2.6.0/lib/moment.min.js'></script>
+ <!-- <script src='fullcalendar-2.6.0/lib/jquery.min.js'></script> -->
+ <script src='fullcalendar-2.6.0/fullcalendar.min.js'></script>
+
+ <!--Autocomplete-->
+ <script src="../jginnard/jquery-ui.js"></script>
+ <style>
+ .honors{
+   visibility: hidden;
+ }
+ .scheduleTable td, .scheduleTable th {
+   border: 1px solid black;
+   padding: 5px;
+ }
+ #calendar{
+   max-width: 900px;
+ }
+ </style>
+
+</head>
+<body onload="getData(fileName)">
+
+ <nav class="navbar navbar-default">
+   <div class="container-fluid">
+     <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+     </div>
+
+     <!-- Collect the nav links, forms, and other content for toggling -->
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav">
+         <li><a href="../jginnard/index.html">Homepage</a></li>
+         <li><a href="../jginnard/about.html">About Me</a></li>
+         <li class="active"><a href="../jginnard/projects.html">Projects<span class="sr-only">(current)</span></a></li>
+         <li><a href="../jginnard/contact.html">Contact Me</a></li>
+       </ul>
+     </div><!-- /.navbar-collapse -->
+   </div><!-- /.container-fluid -->
+ </nav>
+ <!-- Page Content -->
+ <div class="container-fluid">
+
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+   <div class="row">
+     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <div class="title">
+       <h2>EMU Scheduler</h2>
+       <span class="byline" >Making Scheduling classes as easy as clicking a button.</span> </div>
+     <p>Fill out the form with the 3-4 letter subject and 2-3 digit course number.</p>
+   </div>
+ </div>
+     <div id="appContainer" onload="getData(file), makeAutoFillList();">
+       <div id="messageBox"></div>
+   <div class="row">
+
+     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+       <div class="ui-widget">
+ <table>
+   <tr>
+     <th>Subject</th><th>Course #</th><th class="honors">Honors</th>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject1" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course1" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors1"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject2" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course2" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors2"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject3" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course3" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors3"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject4" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course4" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors4"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject5" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course5" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors5"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject6" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course6" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors6"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject7" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course7" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors7"></td>
+   </tr>
+   <tr>
+     <td><input type="text" id="subject8" data-toggle="tooltip"  title="4 uppercase letters" size="8"></td><td><input type="text" id="course8" data-toggle="tooltip"  title="2-3 digits" size="8"></td><td class="honors"><input type="checkbox" id="honors8"></td>
+   </tr>
+   <tr>
+     <td colspan="2" align="left">
+       <div class="btn-group" role="group" aria-label="...">
+
+         <div class="btn-group" role="group">
+           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Options
+             <span class="caret"></span>
+           </button>
+           <ul class="dropdown-menu">
+             <li><a onclick="limitRange()">Limit Times</a></li>
+             <li><a onclick="toggle_visibility('honors');">Select Honors</a></li>
+             <li><a onclick="window.location.reload()">Reset</a></li>
+             <li role="separator" class="divider"></li>
+             <li><a href="emich_scheduler.html?term=fall">Fall Term</a></li>
+             <li><a href="emich_scheduler.html?term=winter">Winter Term</a></li>
+             <li><a href="emich_scheduler.html?term=summer">Summer Term</a></li>
+           </ul>
+         </div>
+         <button type="button" class="btn btn-primary" onclick="MakeSchedule()">Submit</button>
+
+       </div>
+
+       </td>
+   </tr>
+ </table>
+ </div>
+</div>
+
+<div id="rangeSelector" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+<!--Sliders are added here-->
+</div>
+</div>
+<div id="resultsContainer"></div>
+ </div>
+</div>
+<div><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+ <footer class="footer navbar-fixed-bottom">
+     <div class="row text-center">
+         <div class="col-lg-12">
+             <p>Copyright &copy; Jeremy Ginnard 2016
+         <a href="https://www.linkedin.com/pub/jeremy-ginnard/36/138/29b" target="_blank">Linkedin </a>
+         <a href="https://github.com/jginnard/" target="_blank"> GitHub </a>
+         </p>
+         </div>
+     </div>
+ </footer>
+</body>
+</html>
