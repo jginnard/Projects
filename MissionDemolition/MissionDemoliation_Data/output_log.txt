@@ -1,0 +1,40 @@
+Initialize engine version: 5.4.2f1 (94e3a60ee258)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.040 seconds
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Git\Projects\MissionDemolition\MissionDemoliation_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.541429 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 22e4 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.025186 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 321.
+Total: 0.270074 ms (FindLiveObjects: 0.017279 ms CreateObjectMapping: 0.015359 ms MarkObjects: 0.229115 ms  DeleteObjects: 0.006399 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.564149 ms
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 1020.
+Total: 1.644449 ms (FindLiveObjects: 0.065598 ms CreateObjectMapping: 0.029119 ms MarkObjects: 0.209596 ms  DeleteObjects: 1.339495 ms)
+
