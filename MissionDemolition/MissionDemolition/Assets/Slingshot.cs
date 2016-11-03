@@ -5,7 +5,7 @@ public class Slingshot : MonoBehaviour {
     static public Slingshot S;
 
     public GameObject prefabProjectile;
-    public static float velocityMult = 4f;
+    public static float velocityMult = 8f;
     public bool _____________________________;
     // fields set dynamically
     public GameObject   launchPoint;
